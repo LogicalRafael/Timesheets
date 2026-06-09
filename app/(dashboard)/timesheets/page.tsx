@@ -37,12 +37,23 @@ export default async function TimesheetsPage() {
           <h1 className="text-2xl font-bold text-gray-900">Timesheets</h1>
           <p className="mt-1 text-sm text-gray-500">Track and submit your weekly hours</p>
         </div>
-        <Link
-          href="/timesheets/new"
-          className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-colors"
-        >
-          + New
-        </Link>
+        <div className="flex items-center gap-3">
+          <a
+            href="/api/export/timesheets"
+            className="inline-flex items-center gap-2 rounded-xl border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+              <path fillRule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm4.75 11.25a.75.75 0 001.5 0v-3.69l1.22 1.22a.75.75 0 101.06-1.06l-2.5-2.5a.75.75 0 00-1.06 0l-2.5 2.5a.75.75 0 101.06 1.06l1.22-1.22v3.69z" clipRule="evenodd" />
+            </svg>
+            Export PDF
+          </a>
+          <Link
+            href="/timesheets/new"
+            className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-colors"
+          >
+            + New
+          </Link>
+        </div>
       </div>
 
       <div className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-900/5 overflow-hidden">
